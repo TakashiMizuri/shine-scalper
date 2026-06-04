@@ -136,7 +136,7 @@
 | Язык / runtime | **C#**, **.NET 8** |
 | Тип приложения | Worker / hosted service + **ASP.NET Core** (API + real-time) |
 | Real-time → UI | **SignalR** (или WebSocket) |
-| БД | **SQLite** (MVP) или **PostgreSQL** (при росте объёма логов) |
+| БД | **SQLite** (файл `shine-scalper.db`) |
 | Bybit | REST + **WebSocket** (klines 5m, ticks / ticker, private — в live) |
 
 **Замечание по скорости:** для уровней 5m и входа на секундах–минутах узкое место — **сеть и API биржи**, не язык. C# / .NET 8 достаточен для MVP; оптимизация hot path — при необходимости.
